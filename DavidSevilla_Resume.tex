@@ -16,7 +16,7 @@
 \moderncvcolor{blue}
 
 % Packages
-\usepackage[scale=0.8,margin=0.65in]{geometry}
+\usepackage[scale=0.8,margin=0.65in,bottom=0.45in]{geometry}
 \usepackage{color}
 
 % Relevant links
@@ -33,7 +33,7 @@
 
 \sethintscolumntowidth{mmm yyyy -- mmm y}
 
-\section{Education}
+\normalsize{\section{Education}}
 \cventry{Aug 2016 -- May 2020}{B.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
     \textbf{Minor} in \textit{Pure and Applied Mathematics}.
     \begin{itemize}
@@ -44,16 +44,16 @@
 }
 
 \section{Experience}
-\cventry{Jun 2019 -- Aug 2019}{Software Engineer}{JPMorgan Chase}{Jersey City, NJ}{}{
-    Created a dashboard for weekly financial forecast validation.
+\cventry{Jun 2019 -- Aug 2019}{Software Engineer Intern}{JPMorgan Chase}{Jersey City, NJ}{}{
+    Created a dashboard for weekly financial forecast submissions. Saves 300 hours of yearly effort.
     \begin{itemize}
         \titem{Augmented a \bbold{REST}ful web service with \bbold{Spring Boot} and \bbold{Hibernate}}{Java, SQL}
         \titem{Designed responsive web pages and modular components using \bbold{React}}{JS}
         \iitem{Migrated the code base into distinct micro-services, and deployed with \bbold{Cloud Foundry}}
-        \iitem{Engaged in fully agile development process with business-user interaction. \newline Ultimately saves 6 hours of manual effort per week}
+        \iitem{Engaged in fully agile development process with frequent client interactions}
     \end{itemize}
 }
-\cventry{Jun 2018 -- Aug 2018}{Software Engineer}{JPMorgan Chase}{Jersey City, NJ}{}{
+\cventry{Jun 2018 -- Aug 2018}{Software Engineer Intern}{JPMorgan Chase}{Jersey City, NJ}{}{
     Provided transparency for \textit{calculation data} to users of a financial stress event simulator.
     \begin{itemize}
         \titem{Implemented a \bbold{Hadoop} big data pipeline using \bbold{Spark} and \bbold{Impala}}{Python}
@@ -61,7 +61,7 @@
         \titem{Integrated code base with existing simulator project and services}{Java, Bash, SQL}
     \end{itemize}
 }
-\cventry{Sep 2017 -- Present}{Course Assistant}{Stevens Institute of Technology}{Hoboken, NJ}{}{
+\cventry{Sep 2017 -- Present\\(semesterly)}{Course Assistant}{Stevens Institute of Technology}{Hoboken, NJ}{}{
     \begin{itemize}
         \iitem{Holding office hours, lab hours, and lectures, and both grading and designing assignments}
         \iitem{Worked in both theoretical and programming-heavy computer science courses}
@@ -69,18 +69,20 @@
 }
 
 \section{Projects}
-\cventry{Spring 2018}{Virtual Memory Simulator}{CS 492 Operating Systems}{Stevens}{}{
+\cventry{Spring 2019}{Type Inference Engine}{CS 810 Type Systems}{Stevens}{}{
     \begin{itemize}
-        \iitem{Simulates various page replacement algorithms and general memory access}
-        \iitem{Designed efficient, extensible data structures to logically maintain memory state}
-        \iitem{Captured performance analytics and automated algorithm comparison testing}
+        \titem{Developed a type inference algorithm from scratch for a small programming language with references, lists, recursive functions, and more. Used Martelli-Montanari unification}{OCaml}
     \end{itemize}
 }
-\cventry{Spring 2017}{\href{http://imadethis.website/wordcrimes/}{Word Crimes}}{DuckHacks}{Stevens}{}{
+\cventry{Spring 2018}{Virtual Memory Simulator}{CS 492 Operating Systems}{Stevens}{}{
     \begin{itemize}
-        \iitem{Challenging word association game. Won         \textit{Best Overall}}
-        \iitem{Custom word vector clustering algorithm, built on top of Google's \code{word2vec}}
-        \iitem{Clean, minimalist, mobile-first front-end design}
+        \titem{Simulates various page replacement algorithms with efficient, extensible data structures for main memory, programs, and page tables. Captures performance analytics}{C}
+    \end{itemize}
+}
+\cventry{Spring 2017}{\href{http://imadethis.website/wordcrimes/}{Word Crimes}}{DuckHacks}{Stevens}{Won \textit{Best Overall}}{
+    \begin{itemize}
+        \iitem{Challenging word association game with minimalist front-end design}
+        \titem{Built custom word vector clustering algorithm on top of Google's \bbold{word2vec}}{JS}
     \end{itemize}
 }
 
