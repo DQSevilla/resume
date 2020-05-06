@@ -16,7 +16,7 @@
 \moderncvcolor{blue}
 
 % Packages
-\usepackage[scale=0.8,margin=0.65in,bottom=0.45in]{geometry}
+\usepackage[scale=0.8,margin=0.65in,top=0.45in,bottom=0.45in]{geometry}
 \usepackage{color}
 
 % Relevant links
@@ -38,18 +38,19 @@
 \cventry{Aug 2016 -- May 2020}{B.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
     \textbf{Minor} in \textit{Pure and Applied Mathematics}.
     \begin{itemize}
-        \iitem{GPA: \bbold{3.76/4.0}. (Dean's List)}
+        \iitem{GPA: \bbold{3.7/4.0}. (Dean's List most semesters)}
         \iitem{President of Upsilon Pi Epsilon (Computer Science Honors Society)}
     \end{itemize}
 }
 
 \section{Experience}
+% \cventry{Sep 2020 -- Dec 2020}{Software Engineer Intern}{Datadog}{New York, NY}{}{}
 \cventry{Jun 2020 -- Aug 2020}{Software Engineer Intern}{Facebook}{Menlo Park, CA}{}{}
 \cventry{Jun 2019 -- Aug 2019}{Software Engineer Intern}{JPMorgan Chase}{Jersey City, NJ}{}{
     \textit{Saved 300 hours of yearly effort by creating a weekly financial forecasting dashboard.}
     \begin{itemize}
         \titem{Augmented a \bbold{REST}ful web service with \bbold{Spring Boot} and \bbold{Hibernate}}{Java, SQL}
-        \titem{Designed responsive web pages and modular components using \bbold{React}}{JS}
+        \titem{Designed responsive web pages and modular \bbold{React} components}{JS}
         \iitem{Migrated the code base into distinct micro-services, and deployed with \bbold{Cloud Foundry}}
     \end{itemize}
 }
@@ -57,28 +58,37 @@
     \textit{Provided transparency for calculation data to users of a financial stress-event simulator.}
     \begin{itemize}
         \titem{Implemented a \bbold{Hadoop} big data pipeline using \bbold{Spark} and \bbold{Impala}}{Python}
-        \titem{Created a \bbold{REST}ful web service in \bbold{Flask} and visual calculation tree}{JS, Python}
+        % \titem{Created a \bbold{REST}ful web service in \bbold{Flask} and visual calculation tree}{JS, Python}
         \titem{Integrated code base with existing simulator project and services}{Java, Bash, SQL}
     \end{itemize}
 }
-\cventry{Sep 2017 -- Present\\(semesterly)}{Course Assistant}{Stevens Institute of Technology}{Hoboken, NJ}{}{
+\cventry{Sep 2017 -- Aug 2020\\(semesterly)}{Course Assistant}{Stevens Institute of Technology}{Hoboken, NJ}{}{
     \begin{itemize}
-        \iitem{Holding office hours, lab hours, and lectures, and both grading and designing assignments}
+        \iitem{Held office hours, lab hours, and lectures. Designed, graded, and automated assignments}
         \iitem{Worked in both theoretical and programming-heavy computer science courses}
     \end{itemize}
 }
 
 \section{Projects}
+\cventry{Sep 2019 -- May 2020}{Content Management System}{Life Skills Software}{Stevens Senior Design}{}{
+    \textit{Platform to upload and review educational media supporting special-needs students and teachers.}
+    \begin{itemize}
+        \titem{Designed the content upload API, models, and object storage logic}{Go, Postgres, S3}
+        \titem{Implemented a role-based authentication model via \bbold{JWT} based middleware}{Go}
+        \titem{Achieved full code coverage. Ran tests with \bbold{Docker} and \bbold{Gitlab CI/CD}}{Go}
+        % \titem{Implemented and supported several fullstack features}{TypeScript, Go, PSQL}
+    \end{itemize}{}
+}
 \cventry{Spring 2019}{Type Inference Engine}{CS 810 Type Systems}{Stevens}{}{
     \begin{itemize}
-        \titem{Developed a type inference algorithm from scratch for a small programming language with references, lists, recursive functions, and more. Used Martelli-Montanari unification}{OCaml}
+        \titem{Implemented Hindley-Milner type inference with Martelli-Montanari unification on a small programming language with references, lists, recursion, and more}{OCaml}
     \end{itemize}
 }
-\cventry{Spring 2018}{Virtual Memory Simulator}{CS 492 Operating Systems}{Stevens}{}{
-    \begin{itemize}
-        \titem{Simulates various page replacement algorithms with efficient, extensible data structures for main memory, programs, and page tables. Captures performance analytics}{C}
-    \end{itemize}
-}
+% \cventry{Spring 2018}{Virtual Memory Simulator}{CS 492 Operating Systems}{Stevens}{}{
+%     \begin{itemize}
+%         \titem{Simulates various page replacement algorithms with efficient, extensible data structures for main memory, programs, and page tables. Captures performance analytics}{C}
+%     \end{itemize}
+% }
 \cventry{Spring 2017}{\href{http://imadethis.website/wordcrimes/}{Word Crimes}}{DuckHacks}{Stevens}{Won \textit{Best Overall}}{
     \begin{itemize}
         \iitem{Challenging word association game with minimalist front-end design}
@@ -88,21 +98,24 @@
 
 \section{Relevant Coursework}
 \cvitem{Computer Science}{\small{
-Advanced Data Structures and Algorithms, Operating Systems, Concurrent Programming, Compilers, Agile, Relational Databases, Web Development, Advanced Unix Programming.
+Advanced Data Structures and Algorithms, Advanced UNIX Programming, Agile, Compilers, Concurrent Programming, GPU Programming, Relational Databases, Systems Administration, Type Systems, Web Development I and II.
 }}
-\cvitem{Mathematics}{\small{
-Discrete Mathematics, Linear Algebra, Probability and Statistics, Abstract Algebra.
-}}
+% \cvitem{Computer Science}{\small{
+% Advanced Data Structures and Algorithms, Operating Systems, Concurrent Programming, Compilers, Agile, Relational Databases, Web Development, Advanced Unix Programming, Systems Administration, GPU Programming.
+% }}
+% \cvitem{Mathematics}{\small{
+% Discrete Mathematics, Linear Algebra, Probability and Statistics, Abstract Algebra.
+% }}
 
 \section{Skills}
 \cvitem{Languages}{\small{
-Java, Python, C, JavaScript, OCaml, Bash, HTML, CSS/SASS, SQL
+Java, C, Python, Go, OCaml, JavaScript, Bash, SQL
 }}
 \cvitem{Frameworks}{\small{
-Express, React, Spring Boot, Flask, NumPy, Pandas
+Gin, Express, React, Spring Boot, NumPy
 }}
 \cvitem{Technologies}{\small{
-GNU/Linux, Git, Node, Cloud Foundry, Hadoop, Spark, MongoDB
+GNU/Linux, Git, Docker, AWS CLI (EC2, EBS, S3), NodeJS, Spark
 }}
 
 \pagebreak
