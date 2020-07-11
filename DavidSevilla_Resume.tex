@@ -2,14 +2,27 @@
 
 \documentclass[11pt,letterpaper,roman]{moderncv}
 
+%%% CUSTOM COMMANDS AND COLORS %%%
+
 % Command and color definitions
 \definecolor{cvblue}{rgb}{0.22,0.45,0.70}
 
+% monospace "code" font
 \newcommand{\code}{\texttt}
+
+% the main blue color used throughout
 \newcommand{\bfcolor}[2]{\textbf{\textcolor{#1}{#2}}}
+
+% the bold blue style used throughout
 \newcommand{\bbold}[1]{\bfcolor{cvblue}{#1}}
+
+% Informative item, a list item and a closing period
 \newcommand{\iitem}[1]{\item{#1}.}
+
+% Technical item, informative item with code list
 \newcommand{\titem}[2]{\iitem{#1} \hfill \code{[#2]}}
+
+%%% MODERNCV AND PACKAGE CONFIG %%%
 
 % Modern CV type
 \moderncvstyle{classic}
@@ -26,7 +39,7 @@
 \social[linkedin]{david-sevilla}
 \social[github]{DQSevilla}
 
-%%% Resume %%%
+%%% RESUME %%%
 \begin{document}
 
 \makecvtitle
@@ -34,28 +47,39 @@
 \sethintscolumntowidth{mmm yyyy -- mmm y}
 
 \section{Education}
-\cventry{Jan 2020 -- Dec 2020}{M.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{}
-\cventry{Aug 2016 -- May 2020}{B.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
+\cventry{Jan 2018 -- Dec 2020}{M.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
+    \begin{itemize}
+        \iitem{GPA: \bbold{3.66/4.0}. Part of an accelerated program}
+    \end{itemize}
+}
+\cventry{Aug 2016 -- Dec 2020}{B.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
     \textbf{Minor} in \textit{Pure and Applied Mathematics}.
     \begin{itemize}
-        \iitem{GPA: \bbold{3.7/4.0}. (Dean's List most semesters)}
+        \iitem{GPA: \bbold{3.75/4.0}. On Dean's List most semesters}
+        % \iitem{M.S. GPA: \bbold{3.66/4.0}. Accelerated course load program}
         \iitem{President of Upsilon Pi Epsilon (Computer Science Honors Society)}
     \end{itemize}
 }
 
 \section{Experience}
 % \cventry{Sep 2020 -- Dec 2020}{Software Engineer Intern}{Datadog}{New York, NY}{}{}
-\cventry{Jun 2020 -- Aug 2020}{Software Engineer Intern}{Facebook}{Menlo Park, CA}{}{}
-\cventry{Jun 2019 -- Aug 2019}{Software Engineer Intern}{JPMorgan Chase}{Jersey City, NJ}{}{
-    \textit{Saved 300 hours of yearly effort by creating a weekly financial forecasting dashboard.}
+\cventry{Jun 2020 -- Aug 2020\\(current)}{Software Engineer Intern}{Facebook}{Menlo Park, CA}{}{
     \begin{itemize}
-        \titem{Augmented a \bbold{REST}ful web service with \bbold{Spring Boot} and \bbold{Hibernate}}{Java, SQL}
-        \titem{Designed responsive web pages and modular \bbold{React} components}{JS}
+        \titem{Improved developer agility by writing Python bindings for search result rankers. \\Exposed the API to \bbold{Jupyter Notebook} with a custom kernel}{C++, Python}
+        % \titem{Eliminated a multi-day debugging process using a \bbold{Hive} data pipeline and wrapper library for executing the Python rankers on large sets of search results}{HSQL}
+        % \iitem{Enabled ad-hoc ranker configuration editing by exposing a custom DSL to Python}
+    \end{itemize}
+}
+\cventry{Jun 2019 -- Aug 2019}{Software Engineer Intern}{JPMorgan Chase}{Jersey City, NJ}{}{
+    Saved 300 hours of yearly effort by creating a weekly financial forecasting dashboard.
+    \begin{itemize}
+        \titem{Augmented a RESTful web service with \bbold{Spring Boot} and \bbold{Hibernate}}{Java, SQL}
+        % \titem{Designed responsive web pages and modular \bbold{React} components}{JS}
         \iitem{Migrated the code base into distinct micro-services, and deployed with \bbold{Cloud Foundry}}
     \end{itemize}
 }
 \cventry{Jun 2018 -- Aug 2018}{Software Engineer Intern}{JPMorgan Chase}{Jersey City, NJ}{}{
-    \textit{Provided transparency for calculation data to users of a financial stress-event simulator.}
+    Provided transparency for calculation data to users of a financial stress-event simulator.
     \begin{itemize}
         \titem{Implemented a \bbold{Hadoop} big data pipeline using \bbold{Spark} and \bbold{Impala}}{Python}
         % \titem{Created a \bbold{REST}ful web service in \bbold{Flask} and visual calculation tree}{JS, Python}
@@ -71,17 +95,17 @@
 
 \section{Projects}
 \cventry{Sep 2019 -- May 2020}{Content Management System}{Life Skills Software}{Stevens Senior Design}{}{
-    \textit{Platform to upload and review educational media supporting special-needs students and teachers.}
+    Service to upload and review educational media supporting special-needs classes.
     \begin{itemize}
-        \titem{Designed the content upload API, models, and object storage logic}{Go, Postgres, S3}
+        \titem{Designed the content upload API, models, and object storage logic}{Go, PSQL, S3}
         \titem{Implemented a role-based authentication model via \bbold{JWT} based middleware}{Go}
-        \titem{Achieved full code coverage. Ran tests with \bbold{Docker} and \bbold{Gitlab CI/CD}}{Go}
+        \titem{Achieved significant code coverage. Ran tests with \bbold{Docker} and \bbold{Gitlab CI/CD}}{Go}
         % \titem{Implemented and supported several fullstack features}{TypeScript, Go, PSQL}
     \end{itemize}{}
 }
 \cventry{Spring 2019}{Type Inference Engine}{CS 810 Type Systems}{Stevens}{}{
     \begin{itemize}
-        \titem{Implemented Hindley-Milner type inference with Martelli-Montanari unification on a small programming language with references, lists, recursion, and more}{OCaml}
+        \titem{Implemented Hindley-Milner type inference with Martelli-Montanari unification on a small functional programming language with references, lists, recursion, and more}{OCaml}
     \end{itemize}
 }
 % \cventry{Spring 2018}{Virtual Memory Simulator}{CS 492 Operating Systems}{Stevens}{}{
@@ -98,24 +122,23 @@
 
 \section{Relevant Coursework}
 \cvitem{Computer Science}{\small{
-Advanced Data Structures and Algorithms, Advanced UNIX Programming, Agile, Compilers, Concurrent Programming, GPU Programming, Relational Databases, Systems Administration, Type Systems, Web Development I and II.
+Advanced Data Structures and Algorithms, Advanced UNIX Programming, Compilers, Agile, Concurrent Programming, GPU Programming, Systems Administration, Type Systems.
 }}
-% \cvitem{Computer Science}{\small{
-% Advanced Data Structures and Algorithms, Operating Systems, Concurrent Programming, Compilers, Agile, Relational Databases, Web Development, Advanced Unix Programming, Systems Administration, GPU Programming.
-% }}
+% Advanced Data Structures and Algorithms, Advanced UNIX Programming, Agile, Compilers, Concurrent Programming, GPU Programming, Relational Databases, Systems Administration, Type Systems, Web Development I and II.
+
 % \cvitem{Mathematics}{\small{
 % Discrete Mathematics, Linear Algebra, Probability and Statistics, Abstract Algebra.
 % }}
 
 \section{Skills}
 \cvitem{Languages}{\small{
-Java, C, Python, Go, OCaml, JavaScript, Bash, SQL
+Java, C, Python, OCaml, Go, JavaScript, Bash, SQL/PSQL
 }}
-\cvitem{Frameworks}{\small{
-Gin, Express, React, Spring Boot, NumPy
-}}
+% \cvitem{Frameworks}{\small{
+% Gin, Express, React, Spring Boot, NumPy
+% }}
 \cvitem{Technologies}{\small{
-GNU/Linux, Git, Docker, AWS CLI (EC2, EBS, S3), NodeJS, Spark
+GNU/Linux, Git, Mercurial, Docker, AWS CLI (EC2, EBS, S3)%, NodeJS, Spark
 }}
 
 \pagebreak
