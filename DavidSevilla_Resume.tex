@@ -49,7 +49,7 @@
 \section{Education}
 \cventry{Jan 2018 -- Dec 2020}{M.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
     \begin{itemize}
-        \iitem{GPA: \bbold{3.66/4.0}. Part of an accelerated program}
+        \iitem{GPA: \bbold{3.56/4.0}. Part of an accelerated program}
     \end{itemize}
 }
 \cventry{Aug 2016 -- May 2020}{B.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
@@ -62,16 +62,21 @@
 }
 
 \section{Experience}
-\cventry{Sep 2020 -- Dec 2020\\(current)}{Software Engineer Intern}{\underline{Datadog}}{New York, NY}{}{
-    Working in the Web Reliability team.
+\cventry{Sep 2020 -- Dec 2020}{Software Engineer Intern}{\underline{Datadog}}{New York, NY}{}{
+    Workied in the Web Reliability Engineering team supporting the Datadog API layer.
+    \begin{itemize}
+        \iitem{Managed several \bbold{Kubernetes} deployments of \bbold{Redis} cluster web caches}
+        \titem{Implemented a service proxy sidecar using \bbold{Envoy}'s gRPC API for dynamic service discovery, rate limiting, circuit breaking, and authentication}{Python, Go, Docker}
+        \iitem{Added metrics collection and configuration file templating and generation to the sidecar}
+    \end{itemize}
 }
 \cventry{Jun 2020 -- Aug 2020}{Software Engineer Intern}{\underline{Facebook}}{Menlo Park, CA}{}{
     Cut behavior testing time for custom search result rankers from days to minutes.
     \begin{itemize}
         \titem{Designed efficient Python bindings for a generic search result ranker}{C++}
         \titem{Wrote a library to execute the ranker on large search datasets from \bbold{Hive}}{Python, SQL}
-        \iitem{Improved total ranker execution speed by 500\% with parallel batch processing}
-        \iitem{Exposed both APIs to a custom \bbold{Jupyter Notebook} kernel, improving developer agility}
+        \iitem{Improved initial ranker execution speed by 500\% using parallel batch processing}
+        % \iitem{Exposed both APIs to a custom \bbold{Jupyter Notebook} kernel, improving developer agility}
     \end{itemize}
 }
 \cventry{Jun 2019 -- Aug 2019}{Software Engineer Intern}{\underline{JPMorgan Chase}}{Jersey City, NJ}{}{
@@ -79,7 +84,7 @@
     \begin{itemize}
         \titem{Augmented a RESTful web service with \bbold{Spring Boot} and \bbold{Hibernate}}{Java, SQL}
         % \titem{Designed responsive web pages and modular \bbold{React} components}{JS}
-        \iitem{Migrated the code base into distinct micro-services, and deployed with \bbold{Cloud Foundry}}
+        \iitem{Migrated the code base into distinct microservices, and deployed with \bbold{Cloud Foundry}}
     \end{itemize}
 }
 \cventry{Jun 2018 -- Aug 2018}{Software Engineer Intern}{\underline{JPMorgan Chase}}{Jersey City, NJ}{}{
@@ -90,10 +95,11 @@
         \titem{Redirected simulator debug info dumps to this pipeline}{Java, Bash, SQL}
     \end{itemize}
 }
-\cventry{Sep 2017 -- Aug 2020\\(semesterly)}{Course Assistant}{\underline{Stevens Institute of Technology}}{Hoboken, NJ}{}{
+\cventry{Sep 2017 -- Aug 2020\\(semesterly)}{Teaching Assistant}{\underline{Stevens Institute of Technology}}{Hoboken, NJ}{}{
     \begin{itemize}
-        \iitem{Held office hours, lab hours, and lectures. Designed, graded, and automated assignments}
-        \iitem{Worked in both theoretical and programming-heavy computer science courses}
+        \iitem{Held office and lab hours. Designed, graded, and automated computer science assignments}
+        % \iitem{Held office hours, lab hours, and lectures. Designed, graded, and automated assignments}
+        % \iitem{Worked in both theoretical and programming-heavy computer science courses}
     \end{itemize}
 }
 
@@ -108,14 +114,13 @@
     \end{itemize}{}
 }
 
-% TODO: WIP
-% \cventry{Spring 2020}{Oat Compiler}{CS 516 - Compilers}{Stevens}{}{
-%     Compiler for a small C-like language called Oat.
-%     \begin{itemize}
-%         \titem{Wrote modular AST translation code from Oat to a subset of LLVM and a subset of x86 Assembly.}{OCaml}
-%         \iitem{Extended the compiler frontend with type checking and lattice-based static analysis}
-%     \end{itemize}
-% }
+\cventry{Spring 2020}{Oat Compiler}{CS 516 - Compilers}{Stevens}{}{
+    Compiler for a small C-like language called Oat.
+    \begin{itemize}
+        \titem{Wrote modular AST translation code from Oat to LLVM and x86 assembly}{OCaml}
+        \iitem{Extended the compiler frontend with type checking and lattice-based static analysis passes}
+    \end{itemize}
+}
 
 % \cventry{Spring 2019}{Type Inference Engine}{CS 810 -- Type Systems}{Stevens}{}{
 %     \begin{itemize}
@@ -136,10 +141,10 @@
 %     \end{itemize}
 % }
 
-\section{Relevant Coursework}
-\cvitem{Computer Science}{\small{
-Advanced Data Structures and Algorithms, Compilers, GPU Programming, Formal Verification, Concurrent Programming, Advanced UNIX Programming, Systems Administration, Type Systems, Web Programming I and II.
-}}
+% \section{Relevant Coursework}
+% \cvitem{Computer Science}{\small{
+% Advanced Data Structures and Algorithms, Compilers, GPU Programming, Formal Verification, Concurrent Programming, Advanced UNIX Programming, Systems Administration, Type Systems, Web Programming I and II.
+% }}
 
 % \cvitem{Mathematics}{\small{
 % Discrete Mathematics, Linear Algebra, Probability and Statistics, Abstract Algebra.
@@ -147,13 +152,13 @@ Advanced Data Structures and Algorithms, Compilers, GPU Programming, Formal Veri
 
 \section{Skills}
 \cvitem{Languages}{\small{
-Java, C, Python, OCaml, Go, JavaScript, Bash, SQL/PSQL
+Java, C, Python, OCaml, Coq, Go, JavaScript, Bash, SQL
 }}
 % \cvitem{Frameworks}{\small{
 % Gin, Express, React, Spring Boot, NumPy
 % }}
 \cvitem{Technologies}{\small{
-GNU/Linux, Git, Mercurial, Docker, AWS CLI (EC2, EBS, S3)%, NodeJS, Spark
+GNU/Linux, Git, Mercurial, Docker, Kubernetes CLI, AWS CLI (EC2, EBS, S3)%, NodeJS, Spark
 }}
 
 \pagebreak
