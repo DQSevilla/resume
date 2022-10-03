@@ -47,24 +47,40 @@
 \sethintscolumntowidth{mmm yyyy -- mmm y}
 
 \section{Experience}
-\cventry{Mar 2020 -- Present}{Software Engineer}{\underline{Datadog}}{New York, NY}{}{
-    Returned to the Web Reliability Engineering Team
+\cventry{May 2022 -- Present}{Software Engineer II}{\underline{Datadog}}{New York, NY}{}{
+    Continuing to work on the API Frameworks Core team.
+    \begin{itemize}
+        \titem{Wrote and open-sourced a \bbold{JSON:API}-format compliant serialization library}{Go}
+        \titem{Designed a CLI for creating, managing, and deploying API microservices}{Go, Bazel}
+        \titem{Contributed several features to a new in-house web framework including a gRPC auth client, route registration, an error handling utilities}{Go}
+        \iitem{Lead a group of engineers called the API Standards Guild to improve Datadog's API design by authoring RFCs, giving advice, and writing tools to enforce the guidelines}
+    \end{itemize}
+}
+\cventry{Mar 2020 -- May 2022}{Software Engineer}{\underline{Datadog}}{New York, NY}{}{
+    Returned to the API Frameworks Team focusing on public API tooling and developer experience.
+    \begin{itemize}
+        \titem{Migrated hundreds of engineers from using an unreliable VM for local development to using self-service kubernetes namespaces called devkubes}{Python, Bazel, Go}
+        \titem{Designed a framework for running health checks and API tests against canary deployments of our web backend, which rolls back production deploys upon failure}{Go}
+        \titem{Created an API for restricting access to Datadog using IP address allow lists}{Python}
+        \iitem{Mentored several interns and new grad engineers, helping them finish medium-sized projects}
+        % \iitem{Authored and enforced several RFCs on API development standards and tools}
+    \end{itemize}
 }
 \cventry{Sep 2020 -- Dec 2020}{Software Engineer Intern}{\underline{Datadog}}{New York, NY}{}{
-    Worked in the Web Reliability Engineering team supporting the Datadog API layer.
+    Supported the beginning stages of a smarter edge infrastructure for web APIs.
     \begin{itemize}
-        \iitem{Managed several \bbold{Kubernetes} deployments of \bbold{Redis} cluster web caches}
+        % \iitem{Managed several \bbold{Kubernetes} deployments of \bbold{Redis} cluster web caches}
         \titem{Implemented a service proxy sidecar using \bbold{Envoy}'s gRPC API for dynamic service discovery, rate limiting, circuit breaking, and authentication}{Python, Go, Docker}
-        \iitem{Added metrics collection and configuration file templating and generation to the sidecar}
+        \iitem{Instrumented sidecar metrics and implemented configuration file templating and generation}
     \end{itemize}
 }
 \cventry{Jun 2020 -- Aug 2020}{Software Engineer Intern}{\underline{Facebook}}{Menlo Park, CA}{}{
     Cut behavior testing time for custom search result rankers from days to minutes.
     \begin{itemize}
         \titem{Designed efficient Python bindings for a generic search result ranker}{C++}
-        \titem{Wrote a library to execute the ranker on large search datasets from \bbold{Hive}}{Python, SQL}
+        \titem{Wrote a library to execute the ranker on large search result datasets}{Python, SQL}
         \iitem{Improved initial ranker execution speed by 500\% using parallel batch processing}
-        % \iitem{Exposed both APIs to a custom \bbold{Jupyter Notebook} kernel, improving developer agility}
+        \iitem{Exposed both APIs to a custom \bbold{Jupyter Notebook} kernel, improving developer agility}
     \end{itemize}
 }
 \cventry{Jun 2019 -- Aug 2019}{Software Engineer Intern}{\underline{JPMorgan Chase}}{Jersey City, NJ}{}{
@@ -75,50 +91,44 @@
         \iitem{Migrated the code base into distinct microservices, and deployed with \bbold{Cloud Foundry}}
     \end{itemize}
 }
-\cventry{Jun 2018 -- Aug 2018}{Software Engineer Intern}{\underline{JPMorgan Chase}}{Jersey City, NJ}{}{
-    Provided transparency for calculation data to users of a financial stress-event simulator.
+\cventry{Jun 2018 -- Aug 2018}{\normalfont{\small{Provided transparency for calculation data to users of a financial stress-event simulator}}}{}{}{}{
+    % Provided transparency for calculation data to users of a financial stress-event simulator.
     \begin{itemize}
         \titem{Implemented a \bbold{Hadoop} big data pipeline using \bbold{Spark} and \bbold{Impala}}{Python}
         % \titem{Created a \bbold{REST}ful web service in \bbold{Flask} and visual calculation tree}{JS, Python}
         \titem{Redirected simulator debug info dumps to this pipeline}{Java, Bash, SQL}
     \end{itemize}
 }
-\cventry{Sep 2017 -- Aug 2020\\(semesterly)}{Teaching Assistant}{\underline{Stevens Institute of Technology}}{Hoboken, NJ}{}{
-    \begin{itemize}
-        \iitem{Held office and lab hours. Designed, graded, and automated computer science assignments}
-        % \iitem{Held office hours, lab hours, and lectures. Designed, graded, and automated assignments}
-        % \iitem{Worked in both theoretical and programming-heavy computer science courses}
-    \end{itemize}
-}
+% \cventry{Sep 2017 -- Aug 2020\\(semesterly)}{Teaching Assistant}{\underline{Stevens Institute of Technology}}{Hoboken, NJ}{}{
+%     \begin{itemize}
+%         \iitem{Held office and lab hours. Designed, graded, and automated computer science assignments}
+%         % \iitem{Held office hours, lab hours, and lectures. Designed, graded, and automated assignments}
+%         % \iitem{Worked in both theoretical and programming-heavy computer science courses}
+%     \end{itemize}
+% }
 
-\section{Projects}
-\cventry{Sep 2019 -- May 2020}{Content Management System}{Life Skills Software}{Stevens Senior Design}{}{
-    Service to upload and review educational media supporting special-needs classes.
-    \begin{itemize}
-        \titem{Designed the content upload API, models, and object storage logic}{Go, PSQL, S3}
-        \titem{Implemented a role-based authentication model via \bbold{JWT} based middleware}{Go}
-        % \titem{Achieved significant code coverage. Ran tests with \bbold{Docker} and \bbold{Gitlab CI/CD}}{Go}
-        % \titem{Implemented and supported several fullstack features}{TypeScript, Go, PSQL}
-    \end{itemize}{}
-}
+% \section{Projects}
+% \cventry{Sep 2019 -- May 2020}{Content Management System}{Life Skills Software}{Stevens Senior Design}{}{
+%     Service to upload and review educational media supporting special-needs classes.
+%     \begin{itemize}
+%         \titem{Designed the content upload API, models, and object storage logic}{Go, PSQL, S3}
+%         \titem{Implemented a role-based authentication model via \bbold{JWT} based middleware}{Go}
+%         % \titem{Achieved significant code coverage. Ran tests with \bbold{Docker} and \bbold{Gitlab CI/CD}}{Go}
+%         % \titem{Implemented and supported several fullstack features}{TypeScript, Go, PSQL}
+%     \end{itemize}{}
+% }
 
-\cventry{Spring 2020}{Oat Language Compiler}{CS 516 - Compilers}{Stevens}{}{
-    % Compiler for a small C-like language called Oat.
-    \begin{itemize}
-        \titem{Wrote front-end and backend AST translation to LLVM and x86 assembly}{OCaml}
-        \iitem{Extended the compiler frontend with type checking and lattice-based static analysis passes}
-    \end{itemize}
-}
+% \cventry{Spring 2020}{Oat Language Compiler}{CS 516 - Compilers}{Stevens}{}{
+%     % Compiler for a small C-like language called Oat.
+%     \begin{itemize}
+%         \titem{Wrote front-end and backend AST translation to LLVM and x86 assembly}{OCaml}
+%         \iitem{Extended the compiler frontend with type checking and lattice-based static analysis passes}
+%     \end{itemize}
+% }
 
 % \cventry{Spring 2019}{Type Inference Engine}{CS 810 -- Type Systems}{Stevens}{}{
 %     \begin{itemize}
 %         \titem{Implemented Hindley-Milner type inference with Martelli-Montanari unification on a small functional programming language with references, lists, recursion, and more}{OCaml}
-%     \end{itemize}
-% }
-
-% \cventry{Spring 2018}{Virtual Memory Simulator}{CS 492 Operating Systems}{Stevens}{}{
-%     \begin{itemize}
-%         \titem{Simulates various page replacement algorithms with efficient, extensible data structures for main memory, programs, and page tables. Captures performance analytics}{C}
 %     \end{itemize}
 % }
 
@@ -141,7 +151,7 @@
 \section{Education}
 \cventry{Jan 2018 -- Dec 2020\\\small{GPA: \bbold{3.56/4.0}}}{M.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
     \begin{itemize}
-        \iitem{Invited to accelerated masters program}
+        \iitem{Accepted to an accelerated masters program}
     \end{itemize}
 }
 \cventry{Aug 2016 -- May 2020\\\small{GPA: \bbold{3.75/4.0}}}{B.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
@@ -154,13 +164,13 @@
 
 \section{Skills}
 \cvitem{Languages}{\small{
-Java, C, Python, OCaml, Coq, Go, JavaScript, Bash, SQL
+Go, Python, C, Java, OCaml, Coq, JavaScript, Bash, SQL
 }}
 % \cvitem{Frameworks}{\small{
-% Gin, Express, React, Spring Boot, NumPy
+% Flask, Gin, Spring Boot, NumPy
 % }}
 \cvitem{Technologies}{\small{
-GNU/Linux, Git, Mercurial, Docker, Kubernetes CLI, AWS CLI (EC2, EBS, S3)%, NodeJS, Spark
+GNU/Linux, Git, Bazel, Docker, Kubernetes, Helm, AWS CLI, Temporal
 }}
 
 \pagebreak
