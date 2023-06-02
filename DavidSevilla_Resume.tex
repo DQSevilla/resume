@@ -6,6 +6,7 @@
 
 % Command and color definitions
 \definecolor{cvblue}{rgb}{0.22,0.45,0.70}
+\definecolor{blue}{rgb}{0.0,0.0,1}
 
 % monospace "code" font
 \newcommand{\code}{\texttt}
@@ -21,6 +22,9 @@
 
 % Technical item, informative item with code list
 \newcommand{\titem}[2]{\iitem{#1} \hfill \code{[#2]}}
+
+% bbold as a link (new idea: only use bbold for links...
+\newcommand{\blink}[2]{\href{#1}{\bbold{#2}}}
 
 %%% MODERNCV AND PACKAGE CONFIG %%%
 
@@ -48,55 +52,57 @@
 
 \section{Experience}
 \cventry{May 2022 -- Present}{Software Engineer II}{\underline{Datadog}}{New York, NY}{}{
-    Continuing to work on the API Frameworks Core team.
+    Worked on the API Frameworks Core team to provide a next-generation API platform.
     \begin{itemize}
-        \titem{Wrote and open-sourced a \bbold{JSON:API}-format compliant serialization library}{Go}
+        \titem{Wrote and \blink{https://github.com/DataDog/jsonapi}{open-sourced} a serialization package for the \blink{https://jsonapi.org/}{JSON:API} format}{Go}
+        % TODO: insert newline and write: "Read about it at <blog post link>"?
+        \titem{Implemented several features for a custom backend web framework including schema validation, request body decoding, secrets access, and authentication flows}{Go}
         \titem{Designed a CLI for creating, managing, and deploying API microservices}{Go, Bazel}
-        \titem{Contributed several features to a new in-house web framework including a gRPC auth client, route registration, an error handling utilities}{Go}
-        \iitem{Lead a group of engineers called the API Standards Guild to improve Datadog's API design by authoring RFCs, giving advice, and writing tools to enforce the guidelines}
+        \iitem{Lead a group of engineers called the API Standards Guild to improve Datadog's API design by authoring RFCs, holding office hours, and writing tools to enforce the guidelines}
     \end{itemize}
 }
-\cventry{Mar 2020 -- May 2022}{Software Engineer}{\underline{Datadog}}{New York, NY}{}{
-    Returned to the API Frameworks Team focusing on public API tooling and developer experience.
+\cventry{Mar 2021 -- May 2022}{Software Engineer}{\underline{Datadog}}{New York, NY}{}{
+    % Returned to the API Frameworks Team focusing on public API tooling and developer experience.
     \begin{itemize}
         \titem{Migrated hundreds of engineers from using an unreliable VM for local development to using self-service kubernetes namespaces called devkubes}{Python, Bazel, Go}
-        \titem{Designed a framework for running health checks and API tests against canary deployments of our web backend, which rolls back production deploys upon failure}{Go}
-        \titem{Created an API for restricting access to Datadog using IP address allow lists}{Python}
-        \iitem{Mentored several interns and new grad engineers, helping them finish medium-sized projects}
-        % \iitem{Authored and enforced several RFCs on API development standards and tools}
+        \titem{Designed a framework for running health checks and API behavior tests against canary deployments of our web backend, which stops deploys upon failure}{Go, k8s}
+        \titem{Wrote an API for restricting access to Datadog via IP address \blink{https://docs.datadoghq.com/api/latest/ip-allowlist/}{allow-lists}. Spoke directly with customers to iterate on the design and implement their feedback}{Python}
+        \iitem{Mentored dozens of interns and new engineers, helping them finish medium-sized projects}
     \end{itemize}
 }
 \cventry{Sep 2020 -- Dec 2020}{Software Engineer Intern}{\underline{Datadog}}{New York, NY}{}{
-    Supported the beginning stages of a smarter edge infrastructure for web APIs.
+    Supported the initial stages of a smarter edge infrastructure for web APIs.
     \begin{itemize}
         % \iitem{Managed several \bbold{Kubernetes} deployments of \bbold{Redis} cluster web caches}
-        \titem{Implemented a service proxy sidecar using \bbold{Envoy}'s gRPC API for dynamic service discovery, rate limiting, circuit breaking, and authentication}{Python, Go, Docker}
-        \iitem{Instrumented sidecar metrics and implemented configuration file templating and generation}
+        \titem{Instrumented Envoy Proxy sidecars for dynamic service discovery}{Go, k8s}
+        \titem{Built a tool to render and merge text templates into Envoy configuration files}{Go}
+        \titem{Improved the reliability and performance of several core Datadog APIs}{Python}
     \end{itemize}
 }
 \cventry{Jun 2020 -- Aug 2020}{Software Engineer Intern}{\underline{Facebook}}{Menlo Park, CA}{}{
-    Cut behavior testing time for custom search result rankers from days to minutes.
+    Reduced behavior testing time for search result rankers from several days to minutes.
     \begin{itemize}
         \titem{Designed efficient Python bindings for a generic search result ranker}{C++}
-        \titem{Wrote a library to execute the ranker on large search result datasets}{Python, SQL}
+        \titem{Wrote a library and efficient queries to run the ranker on large datasets}{Python, SQL}
         \iitem{Improved initial ranker execution speed by 500\% using parallel batch processing}
-        \iitem{Exposed both APIs to a custom \bbold{Jupyter Notebook} kernel, improving developer agility}
+        \iitem{Exposed both APIs to a custom \bbold{Jupyter Notebook} kernel, improving developer experience}
     \end{itemize}
 }
 \cventry{Jun 2019 -- Aug 2019}{Software Engineer Intern}{\underline{JPMorgan Chase}}{Jersey City, NJ}{}{
     Saved 300 hours of yearly effort by creating a weekly financial forecasting dashboard.
     \begin{itemize}
-        \titem{Augmented a RESTful web service with \bbold{Spring Boot} and \bbold{Hibernate}}{Java, SQL}
+        \titem{Wrote new REST APIs for a web service using Spring Boot and Hibernate}{Java, SQL}
         % \titem{Designed responsive web pages and modular \bbold{React} components}{JS}
-        \iitem{Migrated the code base into distinct microservices, and deployed with \bbold{Cloud Foundry}}
+        \iitem{Migrated essential parts of the web service into distinct cloud-deployed microservices}
     \end{itemize}
 }
 \cventry{Jun 2018 -- Aug 2018}{\normalfont{\small{Provided transparency for calculation data to users of a financial stress-event simulator}}}{}{}{}{
     % Provided transparency for calculation data to users of a financial stress-event simulator.
     \begin{itemize}
-        \titem{Implemented a \bbold{Hadoop} big data pipeline using \bbold{Spark} and \bbold{Impala}}{Python}
+        \item{Implemented a big data pipeline and visualization for understanding the simulator's computations granularly, using Spark, Impala, and Tableau.\ \ \ \hspace{4em} \code{[Java, Python, mySQL]}}
+        % TODO: The below doesn't work for some reason... Only in this entry...
+        %\titem{Implemented a big data pipeline and visualization for understanding the simulator's computation granularly, with Spark, Impala and Tableau}{Java, Python, Bash, SQL}
         % \titem{Created a \bbold{REST}ful web service in \bbold{Flask} and visual calculation tree}{JS, Python}
-        \titem{Redirected simulator debug info dumps to this pipeline}{Java, Bash, SQL}
     \end{itemize}
 }
 % \cventry{Sep 2017 -- Aug 2020\\(semesterly)}{Teaching Assistant}{\underline{Stevens Institute of Technology}}{Hoboken, NJ}{}{
@@ -164,13 +170,13 @@
 
 \section{Skills}
 \cvitem{Languages}{\small{
-Go, Python, C, Java, OCaml, Coq, JavaScript, Bash, SQL
+Go, Python, C, Java, JavaScript, OCaml, Bash, SQL
 }}
 % \cvitem{Frameworks}{\small{
 % Flask, Gin, Spring Boot, NumPy
 % }}
 \cvitem{Technologies}{\small{
-GNU/Linux, Git, Bazel, Docker, Kubernetes, Helm, AWS CLI, Temporal
+GNU/Linux, Git, Bazel, Datadog, Kubernetes (k8s), Helm, Temporal
 }}
 
 \pagebreak
