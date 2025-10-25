@@ -59,36 +59,43 @@
 \sethintscolumntowidth{mmm yyyy -- mmm y}
 
 \section{Experience}
-\cventry{May 2022 -- Present}{Software Engineer II}{\underline{Datadog}}{New York, NY}{}{
-    Worked on an internal developer platform for building API backend microservices.
+\cventry{Jan 2025 -- Present}{Senior Software Engineer}{\underline{Rokt}}{New York, NY}{}{
+    Developed identity graphs to improve ad-relevancy ML models and attribution precision.
+    \begin{itemize}
+        \titem{Implemented the \blink{https://namyongpark.github.io/assets/pdf/icdm2016_pacc.pdf}{Partition-Aware Connected Components} algorithm in Spark to efficiently link hundreds of billions of person records into an identity graph}{Scala}
+        \titem{Created foundational libraries for standardization and fuzzy-matching of PII records to support probabilistic data matching}{Scala}
+        \titem{Instrumented several Spark jobs and pipelines to evaluate 3rd party data vendors, collect accurate graph metrics, and cut graph build times significantly}{Python, Bash}
+    \end{itemize}
+}
+\cventry{May 2022 -- Nov 2024}{Software Engineer II}{\underline{Datadog}}{New York, NY}{}{
+    Worked on an internal developer platform to build API backend microservices.
     \begin{itemize}
         \titem{Wrote and \blink{https://github.com/DataDog/jsonapi}{open-sourced} a serialization package for the \blink{https://jsonapi.org/}{JSON:API} format}{Go}
-        % Or "created components"
-        \titem{Designed a domain-specific language for defining HTTP services. Generated boilerplate server code, dependency injection code, and OpenAPI spec documents}{Go}
-        \titem{Wrote core packages of a backend web framework for route registration, schema validation, error handling, thread-safe header access, and more}{Go}
-        \titem{Built a CLI for creating, managing, and deploying API microservices}{Go, Bazel}
+        \titem{Designed a domain-specific language for defining HTTP services. Wrote packages and build tools to generate server code, dependency injection code, and API docs}{Go, Bazel}
+        \titem{Shipped core components of a backend web framework used by over 400 services, including schema validation, error handling, thread-safe header access, and more}{Go}
+        % \titem{Built a CLI for creating, managing, and deploying API microservices}{Go, Bazel}
         \iitem{Participated in on-call and internal user support rotations. Resolved incidents, wrote postmortems, and improved the reliability of our web backends}
     \end{itemize}
 }
 \cventry{Mar 2021 -- May 2022}{Software Engineer}{\underline{Datadog}}{New York, NY}{}{
-    % Returned to the API Frameworks Team focusing on public API tooling and developer experience.
+    Improved API frameworks, developer tooling, and public API standards accross the company.
     \begin{itemize}
         %\titem{Migrated hundreds of engineers from using an unreliable VM for local development to using self-service kubernetes namespaces called devkubes}{Python, Bazel, Go}
         \titem{Designed a framework for running health checks and API contract tests against canary versions of the web app, which halted deployments upon failure}{Go, k8s}
         \titem{Wrote and published an API for restricting access to Datadog via IP address \blink{https://docs.datadoghq.com/api/latest/ip-allowlist/}{allow-lists}. Worked directly with customers to iterate on the user experience}{Python, SQL}
         \iitem{Lead a group of engineers called the API Standards Guild to improve web API design across Datadog. Authored RFCs, held office hours, and wrote enforcement tools}
-        \iitem{Mentored interns and new engineers, helping them finish medium-sized projects}
+        % \iitem{Mentored interns and new engineers, helping them finish medium-sized projects}
     \end{itemize}
 }
-\cventry{Sep 2020 -- Dec 2020}{Software Engineer Intern}{\underline{Datadog}}{New York, NY}{}{
-    Supported the initial stages of a smarter edge infrastructure for web APIs.
-    \begin{itemize}
-        % \iitem{Managed several \bbold{Kubernetes} deployments of \bbold{Redis} cluster web caches}
-        \titem{Instrumented Envoy Proxy sidecars for dynamic service discovery}{Go, k8s}
-        \titem{Built a tool to render and merge text templates into Envoy configuration files}{Go}
-        \titem{Improved the reliability and performance of several core Datadog APIs}{Python}
-    \end{itemize}
-}
+% \cventry{Sep 2020 -- Dec 2020}{Software Engineer Intern}{\underline{Datadog}}{New York, NY}{}{
+%     Supported the initial stages of a smarter edge infrastructure for web APIs.
+%     \begin{itemize}
+%         % \iitem{Managed several \bbold{Kubernetes} deployments of \bbold{Redis} cluster web caches}
+%         \titem{Instrumented Envoy Proxy sidecars for dynamic service discovery}{Go, k8s}
+%         \titem{Built a tool to render and merge text templates into Envoy configuration files}{Go}
+%         \titem{Improved the reliability and performance of several core Datadog APIs}{Python}
+%     \end{itemize}
+% }
 \cventry{Jun 2020 -- Aug 2020}{Software Engineer Intern}{\underline{Facebook}}{Menlo Park, CA}{}{
     Reduced behavior testing time for search result rankers from several hours to minutes.
     \begin{itemize}
@@ -130,10 +137,10 @@
 
 \section{Skills}
 \cvitem{Languages}{\small{
-Go, Python, C, Java, JavaScript, Lua, OCaml, Bash, SQL
+Go, Scala, Python, Java, C, JavaScript, Lua, OCaml, Bash, SQL
 }}
 \cvitem{Technologies}{\small{
-GNU/Linux, Git, Datadog, Kubernetes, Bazel, Helm, Temporal
+GNU/Linux, Git, Datadog, Kubernetes, Helm, Bazel
 }}
 
 \pagebreak

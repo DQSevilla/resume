@@ -1,0 +1,145 @@
+%%% Document set-up %%%
+
+\documentclass[11pt,letterpaper,roman]{moderncv}
+
+%%% CUSTOM COMMANDS AND COLORS %%%
+
+
+% Packages
+\usepackage[scale=0.8,margin=0.65in,top=0.45in,bottom=0.45in]{geometry}
+\usepackage{color}
+\usepackage{fontspec}
+% \usepackage[scale=0.85]{FiraMono}
+% \usepackage[T1]{fontenc}
+
+\newfontfamily{\berkeley}{BerkeleyMono-Regular.otf}
+\setmonofont[Scale=0.80]{BerkeleyMono-Regular.otf}
+
+% Command and color definitions
+\definecolor{cvblue}{rgb}{0.22,0.45,0.70}
+\definecolor{blue}{rgb}{0.0,0.0,1}
+
+% monospace "code" font
+\newcommand{\code}{\texttt}
+
+% the main blue color used throughout
+\newcommand{\bfcolor}[2]{\textbf{\textcolor{#1}{#2}}}
+
+% the bold blue style used throughout
+\newcommand{\bbold}[1]{\bfcolor{cvblue}{#1}}
+
+% Informative item, a list item and a closing period
+\newcommand{\iitem}[1]{\item{#1}.}
+
+% Technical item, informative item with code list
+\newcommand{\titem}[2]{\iitem{#1} \hfill \code{[#2]}}
+
+% bbold as a link (new idea: only use bbold for links...
+\newcommand{\blink}[2]{\href{#1}{\bbold{#2}}}
+
+%%% MODERNCV AND PACKAGE CONFIG %%%
+
+% Modern CV type
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+
+
+% Relevant links
+\name{David}{Sevilla}
+\email{me@davidqsevilla.com}
+\phone[mobile]{(908) 300-7887}
+\social[linkedin]{david-sevilla}
+\social[github]{DQSevilla}
+
+%%% RESUME %%%
+\begin{document}
+
+\makecvtitle
+
+\sethintscolumntowidth{mmm yyyy -- mmm y}
+
+\section{Experience}
+\cventry{May 2022 -- Present}{Software Engineer II}{\underline{Datadog}}{New York, NY}{}{
+    Worked on an internal developer platform for building API backend microservices.
+    \begin{itemize}
+        \titem{Wrote and \blink{https://github.com/DataDog/jsonapi}{open-sourced} a serialization package for the \blink{https://jsonapi.org/}{JSON:API} format}{Go}
+        \titem{Designed a domain-specific language for defining HTTP services. Generated boilerplate server code, dependency injection code, and OpenAPI spec documents}{Go}
+        \titem{Wrote core packages of a backend web framework for route registration, schema validation, error handling, thread-safe header access, and more}{Go}
+        \titem{Built a CLI for creating, managing, and deploying API microservices}{Go, Bazel}
+        \iitem{Participated in on-call and internal user support rotations. Resolved incidents, wrote postmortems, and improved the reliability of our web backends}
+    \end{itemize}
+}
+\cventry{Mar 2021 -- May 2022}{Software Engineer}{\underline{Datadog}}{New York, NY}{}{
+    Returned to the API Frameworks Team focusing on web API tooling and standards.
+    \begin{itemize}
+        \titem{Migrated hundreds of engineers from using an unreliable VM for local development to using self-service kubernetes namespaces called devkubes}{Python, Bazel, Go}
+        \titem{Designed a framework for running health checks and API contract tests against canary versions of the web app, which halted deployments upon failure}{Go, k8s}
+        \titem{Wrote and published an API for restricting access to Datadog via IP address \blink{https://docs.datadoghq.com/api/latest/ip-allowlist/}{allow-lists}. Worked directly with customers to iterate on the user experience}{Python, SQL}
+        \iitem{Lead a group of engineers called the API Standards Guild to improve web API design across Datadog. Authored RFCs, held office hours, and wrote enforcement tools}
+        \iitem{Mentored interns and new engineers, helping them finish medium-sized projects}
+    \end{itemize}
+}
+\cventry{Sep 2020 -- Dec 2020}{Software Engineer Intern}{\underline{Datadog}}{New York, NY}{}{
+    Supported the initial stages of a smarter edge infrastructure for web APIs.
+    \begin{itemize}
+        \titem{Instrumented Envoy Proxy sidecars for dynamic service discovery}{Go, k8s}
+        \titem{Built a tool to render and merge text templates into Envoy configuration files}{Go}
+        \iitem{Managed several Kubernetes deployments of Redis cluster web caches}
+        \titem{Improved the reliability and performance of several core Datadog APIs}{Python}
+    \end{itemize}
+}
+\cventry{Jun 2020 -- Aug 2020}{Software Engineer Intern}{\underline{Facebook}}{Menlo Park, CA}{}{
+    Reduced behavior testing time for search result rankers from several hours to minutes.
+    \begin{itemize}
+        \titem{Designed efficient Python bindings for a search result ranker library}{C++}
+        \titem{Wrote a wrapper library that reduced testing time by 200\% with parallel batch processing and optimized search result queries}{Python, SQL}
+        \iitem{Exposed both high and low level APIs through a custom Jupyter notebook kernel}
+    \end{itemize}
+}
+\cventry{Jun 2019 -- Aug 2019}{Software Engineer Intern}{\underline{JPMorgan Chase}}{Jersey City, NJ}{}{
+    Improved the functionality and maintainability of a financial forecasting service.
+    \begin{itemize}
+        \titem{Wrote REST endpoints to improve dashboard ergonomics with Spring Boot}{Java, SQL}
+        \iitem{Migrated parts of the service into cloud-deployed microservices}
+    \end{itemize}
+}
+\cventry{Jun 2018 -- Aug 2018}{Software Engineer Intern}{\underline{JPMorgan Chase}}{Jersey City, NJ}{}{
+    Improved transparency of computations in a financial stress event simulator.
+    \begin{itemize}
+        \titem{Implemented a big data pipeline to process and visualize steps of the computations, using Spark, Impala, and Tableau}{Java, Python, SQL}
+        \titem{Created a Flask web service to display parts of the calculation tree}{Python, JavaScript}
+    \end{itemize}
+}
+\cventry{Sep 2017 -- Aug 2020\\(semesterly)}{Teaching Assistant}{\underline{Stevens Institute of Technology}}{Hoboken, NJ}{}{
+    \begin{itemize}
+        \iitem{Held office and lab hours. Designed, graded, and automated computer science assignments}
+        \iitem{Held office hours, lab hours, and lectures. Designed, graded, and automated assignments}
+        \iitem{Worked in both theoretical and programming-heavy computer science courses}
+    \end{itemize}
+}
+
+\section{Education}
+\cventry{Jan 2018 -- Dec 2020\\\small{GPA: \bbold{3.56/4.0}}}{M.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
+    \begin{itemize}
+        \iitem{Accepted to this accelerated masters program due to my academic performance}
+    \end{itemize}
+}
+\cventry{Aug 2016 -- May 2020\\\small{GPA: \bbold{3.75/4.0}}}{B.S. Computer Science}{Stevens Institute of Technology}{Hoboken, NJ}{}{
+    \textbf{Minor} in \textit{Pure and Applied Mathematics}
+    \begin{itemize}
+        \iitem{On Dean's List most semesters}
+        \iitem{President of Upsilon Pi Epsilon (Computer Science Honors Society)}
+    \end{itemize}
+}
+
+\section{Skills}
+\cvitem{Languages}{\small{
+Go, Python, C, Java, JavaScript, Lua, OCaml, Bash, SQL
+}}
+\cvitem{Technologies}{\small{
+GNU/Linux, Git, Datadog, Kubernetes, Bazel, Helm, Temporal
+}}
+
+\pagebreak
+
+\end{document}
